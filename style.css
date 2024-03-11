@@ -30,6 +30,7 @@ nav {
   backdrop-filter: blur(3.6px);
   -webkit-backdrop-filter: blur(3.6px);
   transition: background-color .3s linear;
+  animation: slideInFromTop 1s ease-in-out;
 }
 
 nav:hover {
@@ -39,6 +40,7 @@ nav:hover {
 nav .logo {
   display: flex;
   align-items: center;
+  cursor: pointer;
   img {
     height: 50px;
     width: auto;
@@ -68,7 +70,6 @@ nav ul li a {
   font-weight: 300;
   letter-spacing: -1px;
   cursor: pointer;
-
 }
 
 nav ul li a::after {
@@ -118,16 +119,16 @@ nav .icons-wrapper .icon:hover {
 .hero {
   height: 60vh;
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 125px;
 }
 
-.hero::before {
+/* .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   background-color: #ff46d117;
   z-index: -1;
-}
+} */
 
 .hero video {
   position: absolute;
@@ -139,7 +140,7 @@ nav .icons-wrapper .icon:hover {
   z-index: -2;
 }
 
-h1 {
+.hero h1 {
   font-family: "Playfair Display", serif;
   color: rgba(0, 0, 0, 0.8);;
   font-weight: 300;
@@ -148,9 +149,10 @@ h1 {
   position: absolute;
   top: 180px;
   left: 200px;
+  animation: slideInFromLeft 1s ease-in-out;
 }
 
-button {
+.hero button {
   display: flex;
   position: absolute;
   top: 280px;
@@ -169,6 +171,7 @@ button {
   gap: 4px;
   transition: background-color .3s linear, color .3s ease-in-out, border-radius .5s ease-in-out;
   text-transform: uppercase;
+  animation: slideInFromLeft 1s ease-in-out;
   img {
     height: 24px;
     width: 24px;
@@ -179,4 +182,30 @@ button:hover {
   background-color: #FFF;
   color: #ff8194;
   border-radius: 36px;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  color: rgba(0, 0, 0, 0.8);;
+  font-weight: 300;
+  font-size: 36px;
+  text-align: center;
 }
