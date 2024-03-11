@@ -124,13 +124,16 @@ nav .icons-wrapper .icon .notif {
   justify-content: center;
   top: -2px;
   right: -2px;
-
+  transition: transform .3s ease-in-out;
 }
 
 nav .icons-wrapper .icon:hover {
   background-color: #FCE0E4;
   img {
     transform: scale(.8);
+  }
+  .notif {
+    transform: scale(1.2);
   }
 }
 
