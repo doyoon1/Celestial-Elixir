@@ -435,7 +435,7 @@ button:hover {
 
 .info .rating {
   display: flex;
-  gap: 8px;
+  gap: 4px;
   align-items: center;
 }
 
@@ -448,6 +448,7 @@ button:hover {
   position: static;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  font-weight: 600;
 }
 
 .info h1 {
