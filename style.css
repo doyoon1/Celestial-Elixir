@@ -464,6 +464,19 @@ button:hover {
   font-weight: bold;
 }
 
+.info svg {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  right: 20px;
+  transition: color .1s ease-in-out, fill .5s ease-in-out;
+}
+
+.info svg:hover {
+  color: #FF3040;
+  fill: #FF3040;
+}
+
 .price {
   display: flex;
   gap: 10px;
