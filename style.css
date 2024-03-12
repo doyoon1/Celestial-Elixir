@@ -8,7 +8,6 @@
 
 body {
   background-color: #FCE0E4;
-  height: 1000px;
 }
 
 nav {
@@ -140,7 +139,6 @@ nav .icons-wrapper .icon:hover {
 .hero {
   height: 60vh;
   position: relative;
-  margin-bottom: 125px;
 }
 
 /* .hero::before {
@@ -223,10 +221,108 @@ button:hover {
   }
 }
 
-h1 {
+.new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 80px 100px;
+}
+
+.new h1 {
   font-family: "Playfair Display", serif;
-  color: rgba(0, 0, 0, 0.8);;
+  color: rgba(0, 0, 0, 0.8);
   font-weight: 300;
-  font-size: 36px;
+  font-size: 24px;
   text-align: center;
+}
+.container {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  gap: 10px;
+}
+
+.container .left {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.container .right {
+  width: 100%;
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: auto;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  cursor: pointer;
+}
+
+.img-wrapper img {
+  max-height: 500px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2);
+  transition: transform .3s ease-in-out;
+}
+
+.img-wrapper:hover img {
+  transform: scale(1);
+}
+
+.caption {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(21, 22, 24, 0.24) 0%, #ff46d117 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.caption h1, span, p {
+  /* font-family: "Poppins", sans-serif; */
+  color: #111;
+  position: absolute;
+}
+
+.caption h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  bottom: 120px;
+  left: 40px;
+}
+
+.caption p {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  bottom: 60px;
+  text-align: justify;
+  left: 40px;
+  right: 40px;
+}
+
+.caption span {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  bottom: 20px;
+  left: 40px;
+}
+
+.img-wrapper:hover .caption {
+  opacity: 1;
+}
+
+.caption h1 {
+  margin: 0;
 }
