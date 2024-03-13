@@ -185,10 +185,11 @@ nav .icons-wrapper .icon:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
   background: rgba(255, 255, 255, 0.600);
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
   gap: 4px;
-  transition: background-color .3s linear, color .3s ease-in-out, border-radius .5s ease-in-out;
+  transition: background-color .5s linear, color .3s ease-in-out, border-radius .5s ease-in-out;
   text-transform: uppercase;
   animation: slideInFromLeft 1s ease-in-out;
   img {
@@ -285,14 +286,14 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(21, 22, 24, 0.24) 0%, #ff46d117 100%);
+  background: linear-gradient(90deg, rgba(21, 22, 24, 0.671) 0%, #ff46d117 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .caption h1, span, p, button {
   /* font-family: "Poppins", sans-serif; */
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   position: absolute;
 }
 
